@@ -5,6 +5,7 @@ export const Contents = () => {
   return (
     <div className={home.content}>
         <h3>Sobre mim</h3>
+        <p></p>
     </div>
   )
 }
