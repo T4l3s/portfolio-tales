@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     color: white;
     font-family: sans-serif;
@@ -24,7 +28,13 @@ body {
 
 .content {
     display: flex;
-    margin-top: 7%;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.message {
+    margin-bottom: -1%;
+    margin-inline-end: 20%;
 }
 
 

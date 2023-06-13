@@ -1,9 +1,11 @@
 .footer {
     display: flex;
     flex-direction: row;
+    margin-top: 1%;
+    margin-left: -2%;
     justify-content: center;
     text-align: center;
-    margin-block-start: 27%;
+    /* margin-block-start: 27%; */
     transform: scale(90%);
 }
 
@@ -14,11 +16,11 @@
     cursor: pointer;
 }
 
-p {
+.p {
     margin-top: 0px;
 }
 
-a {
+.a {
     text-decoration: none;
     color: white;
 }
