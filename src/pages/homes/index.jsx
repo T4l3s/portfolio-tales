@@ -12,42 +12,30 @@ const darkTheme = createTheme({
 });
 
 export const Home = () => {
-  const [title, setTitle] = useState([]);
-  const [content, setContent] = useState([]);
 
-  const aboutMeClick = () => {
-    setTitle([])
-    setContent()
-    axios.get(`http://127.0.0.1:5000/aboutme`)
-    .then((res) => {setTitle(res.data.title); setTitle(res.data.content)})
-  }
+  const [title, setTitle] = useState('Opa, bão?')
+  const [content, setContent] = useState(['Bem-vindo(a) ao meu portfólio.', 'Aqui ao lado você pode vê algumas coisas sobre mim e que eu fiz, não é muita coisa :)'])
 
   const initialClick = () => {
-    setTitle([])
-    setContent([])
-    axios.get(`http://127.0.0.1:5000/initial`)
-    .then((res) => {setTitle(res.data.title); setContent(res.data.content);})
+    setTitle('Opa, bão?')
+    setContent(['Bem-vindo(a) ao meu portfólio.', 'Aqui ao lado você pode vê algumas coisas sobre mim e que eu fiz, não é muita coisa :)'])
   }
 
-  useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/aboutme`)
-    .then((res) => {setTitle(res.data.title); setContent(res.data.content);})
-  }, [])
+  const handleClick = () => {
+    setTitle('aaaaaaaaa')
+    setContent('aaaaaaaaa')
+  }
 
   return (
     <div>
+
       <div style={{display: 'flex', flex: 1, flexDirection: 'row', marginBottom: 0, height: 512}}>
-        <Header initial={initialClick} aboutme={aboutMeClick}/>
+        <Header aboutme={handleClick} initial={initialClick}/>
         <Divider style={{marginLeft: -50, marginRight: 25}} orientation='vertical' variant='middle' flexItem theme={darkTheme}>
-          P
         </Divider>
-        <Contents
-        title={title}
-        content={content}
-        />
+        <Contents title={title} content={content}/>
       </div>
       <Divider style={{marginTop: '1%'}} orientation='horizontal' variant='middle' flexItem theme={darkTheme}>
-        P
       </Divider>
         <Footer />
     </div>
